@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kapihan & Co. | Single-Origin Philippine Specialty Coffee</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header class="header" id="header">
+    <div class="header-container">
+      <a href="#home" class="logo">
+        <span class="logo-icon">☕</span>
+        <span class="logo-text">Kapihan <span>& </span>Co.</span>
+      </a>
+
+      <nav class="navbar" id="navbar">
+        <a href="#home" class="nav-link active">Tahanan</a>
+        <a href="#about" class="nav-link">Kwentuhan</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#experience" class="nav-link">Ating Kape</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-trigger" id="cart-trigger" aria-label="Open Shopping Cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">✨ 100% Single-Origin Philippine Arabica & Barako</div>
+      <h1 class="hero-title">Timeless Local Brews, <br><em>Crafted with Pride</em></h1>
+      <p class="hero-description">
+        Celebrating the rich coffee heritage of Benguet, Sagada, and Lipa. Freshly roasted micro-batches served with authentic Pinoy hospitality.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#menu" class="btn btn-primary">Order Fresh Brew</a>
+        <a href="#about" class="btn btn-secondary">Ating Kwento</a>
+      </div>
+      
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Local High-Altitude Beans</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">4.9★</span>
+          <span class="stat-label">Over 2k Reviews</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">24hr</span>
+          <span class="stat-label">Barako Cold Brew</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Value Prop Section -->
+  <section class="about section-padding" id="about">
+    <div class="container grid grid-2-col">
+      <div class="about-image-wrapper">
+        <div class="glass-card badge-overlay">
+          <span class="badge-number">12+</span>
+          <span class="badge-text">Local Farming Communities Supported</span>
+        </div>
+        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1000&q=80" alt="Philippine coffee bean roasting" class="about-img" loading="lazy">
+      </div>
+      <div class="about-text-content">
+        <span class="section-tagline">Mula Sa Ating Lupa</span>
+        <h2 class="section-title">Supporting Local Growers, Preserving Coffee Culture</h2>
+        <p class="section-body">
+          At Kapihan & Co., every cup honors the dedication of Filipino coffee farmers. We directly source single-origin beans from highlands across Luzon and Mindanao, roasting them in small batches to highlight their distinct notes.
+        </p>
+        <ul class="feature-list">
+          <li>
+            <span class="check-icon">✓</span>
+            <div><strong>Direct-Trade Partnership:</strong> Working hand-in-hand with farm cooperatives in Sagada, Benguet, and Batangas.</div>
+          </li>
+          <li>
+            <span class="check-icon">✓</span>
+            <div><strong>Authentic Merienda Pairings:</strong> Freshly baked local pastries served hot daily.</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Menu Section -->
+  <section class="menu section-padding" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tagline">Tampok Na Timpla</span>
+        <h2 class="section-title">Mga Paborito sa Kapihan</h2>
+        
+        <!-- Category Filter Buttons -->
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">Lahat (All)</button>
+          <button class="filter-btn" data-filter="espresso">Mainit (Hot Brews)</button>
+          <button class="filter-btn" data-filter="cold">Palamig (Cold Brews)</button>
+          <button class="filter-btn" data-filter="bakery">Merienda (Bakery)</button>
+        </div>
+      </div>
+
+      <div class="menu-grid" id="menu-grid">
+        <!-- Rendered dynamically via script.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide-out Off-Canvas Cart -->
+  <div class="cart-drawer" id="cart-drawer">
+    <div class="cart-header">
+      <h3>Inyong Order (<span id="drawer-count">0</span>)</h3>
+      <button class="close-cart" id="close-cart">&times;</button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <p class="empty-cart-msg">Wala pang laman ang inyong basket.</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-subtotal">
+        <span>Kabuuan:</span>
+        <strong id="cart-total">₱0.00</strong>
+      </div>
+      <button class="btn btn-primary btn-block" id="checkout-btn">Mag-Checkout Na</button>
+    </div>
+  </div>
+  <div class="cart-overlay" id="cart-overlay"></div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#" class="logo">☕ Kapihan<span>&</span>Co.</a>
+        <p>Pinahahalagahan ang bawat patak ng kape mula sa ating sariling lupain.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <a href="#home">Tahanan</a>
+        <a href="#about">Kwentuhan</a>
+        <a href="#menu">Menu</a>
+      </div>
+      <div class="footer-hours">
+        <h4>Oras at Lokasyon</h4>
+        <p>Lunes - Biyernes: 6:30am - 9:00pm</p>
+        <p>Sabado - Linggo: 7:00am - 10:00pm</p>
+        <p class="address">📍 128 Katipunan Avenue, Quezon City, Metro Manila</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Kapihan & Co. All rights reserved. Made with ❤️ in the Philippines.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
